@@ -66,9 +66,82 @@ nav > h3 {
 #links-container > h3 {
   font-weight: 600;
   color: rgb(167, 167, 167);
+  cursor: pointer;
 }
 
-main > img {
+main {
+  padding: 0 8em;
+}
+
+#banner-heading > img {
   width: 100%;
   height: auto;
+}
+
+#about-section {
+  display: flex;
+  flex-direction: column;
+}
+
+#about-title > h2 {
+  margin: 0;
+  cursor: text;
+  opacity: 0;
+  transform: translateY(20px);
+  filter: blur(5px);
+  animation: fadeSlideUp 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+#about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-top: 3em;
+}
+
+#about-text a {
+  text-decoration: none;
+  color: #bb46ff;
+  font-weight: 500;
+}
+#about-text a:hover {
+  border-bottom: 1px solid #bb46ff;
+}
+
+#about-container > img {
+  min-height: 300px;
+  max-height: 400px;
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(10px);
+  }
+
+  33%{
+    opacity: 0.5;
+    transform: translateY(-5px);
+    filter: blur(2px);
+  }
+
+  66%{
+    opacity: 0.9;
+    transform: translateY(-10px);
+    filter: blur(1px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
 }
