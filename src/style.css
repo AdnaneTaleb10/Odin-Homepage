@@ -323,3 +323,11 @@ main {
   text-decoration: none;
   cursor: pointer;
 }
+
+#preview-button:hover{
+  background-color: #f1c663;
+}
+
+#code-button:hover{
+  background-color: #0f0f0f;
+}
