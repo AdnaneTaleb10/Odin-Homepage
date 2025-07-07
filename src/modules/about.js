@@ -30,7 +30,7 @@ const observer = new IntersectionObserver(
       entry.target.classList.toggle("visible" , entry.isIntersecting);
     });
   },
-  { threshold: 0.5 }
+  { threshold: 1 }
 );
 
 observer.observe(title)
