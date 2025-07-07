@@ -267,6 +267,59 @@ main {
   transition: transform 0.2s;
 }
 
-#arrow-container > svg:hover{
+#arrow-container > svg:hover {
   transform: scale(1.3);
+}
+
+.project-related-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-related-container h3 {
+  font-size: 2rem;
+  margin: 8px 0;
+}
+
+.project-related-container p {
+  font-size: 1.5rem;
+  color: #9e9e9e;
+  font-weight: 300;
+  line-height: 150%;
+}
+
+.project-buttons {
+  display: flex;
+  margin-top: 10px;
+  gap: 15px;
+}
+
+.project-buttons > a {
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 800;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  border-radius: 0.5em;
+}
+
+#preview-button {
+  background-color: #dab359;
+  color: black;
+  border: 1px solid rgb(149, 123, 61);
+  box-shadow: 0 1px 2px 0 rgba(218, 179, 89, 0.8);
+}
+
+#code-button {
+  background-color: #050505;
+  color: white;
+  border: 1px solid rgb(30, 30, 30);
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.8);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
 }
