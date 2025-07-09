@@ -1,7 +1,8 @@
 const aboutTextContainer = document.querySelector("#about-text");
 const fadedText = document.querySelector("#fade-text");
 const moreButton = document.querySelector("#more-button-container");
-const title = document.querySelector("#about-title").firstElementChild;
+const AboutTitle = document.querySelector("#about-title").firstElementChild;
+const ContactTitle = document.querySelector("#contact-title").firstElementChild;
 
 function appendRemainingText() {
   moreButton.addEventListener("click", () => {
@@ -23,16 +24,13 @@ function appendRemainingText() {
 const observer = new IntersectionObserver(
   (entries, observer) => {
     entries.forEach((entry) => {
-/*       if(entry.isIntersecting){
-        entry.target.classList.add("visible");
-      } */
-
       entry.target.classList.toggle("visible" , entry.isIntersecting);
     });
   },
   { threshold: 1 }
 );
 
-observer.observe(title)
+observer.observe(AboutTitle)
+observer.observe(ContactTitle)
 
 export { appendRemainingText };
