@@ -78,6 +78,7 @@ nav > h3 {
 
 main {
   padding: 0 8em;
+  margin: 50px 50px;
 }
 
 #banner-heading > img {
@@ -402,7 +403,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 1000px;
 }
 
 #contact-container > h1 {
@@ -437,10 +437,9 @@ main {
   fill: white;
 }
 
-#discord-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#discord-container {
+  padding: 0;
+  position: relative;
 }
 
 #copy-feedback {
@@ -454,7 +453,9 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  visibility: hidden; 
+  position: absolute;
+  top: -2.2em;
+  visibility: hidden;
 }
 
 @keyframes growing-up-and-down {
