@@ -689,6 +689,18 @@ footer > p {
     gap: 1em;
   }
 
+  nav h3{
+    font-size: 1rem;
+  }
+
+#links-container{
+  gap: 0.5rem;
+}
+
+  #links-container a{
+    font-size: 1rem;
+  }
+
   #intro-screen h1 {
     font-size: 3rem;
   }

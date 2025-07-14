@@ -8,12 +8,21 @@ const leftArrow = document.querySelector("#left-arrow");
 const discordIcon = document.querySelector("#discord");
 
 document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.querySelector("nav");
   const menuToggle = document.getElementById("menu-toggle");
   const linksContainer = document.getElementById("links-container");
   const links = document.querySelectorAll('#links-container > li');
+  let areLinksDisplayed = false;
 
   menuToggle.addEventListener("click", () => {
     linksContainer.classList.toggle("active");
+    if(!areLinksDisplayed){
+      navbar.style.padding = "0 0.5em";
+    }else{
+      navbar.style.padding = "1em";
+    }
+
+    areLinksDisplayed = !areLinksDisplayed;
   });
 
   links.forEach((link) => {
