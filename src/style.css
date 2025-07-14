@@ -9,6 +9,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
   font-family: "Inter", sans-serif;
@@ -59,26 +63,36 @@ nav > h3 {
 }
 
 #links-container {
+  list-style: none;
   display: flex;
   align-items: center;
   gap: 5em;
 }
 
-#links-container > h3 {
+#links-container a {
+  text-decoration: none;
+  font-size: 1.5rem;
   font-weight: 600;
   color: rgb(167, 167, 167);
   cursor: pointer;
   transform: translateY(0);
-  transition: transform ease 0.5s;
 }
 
-#links-container > h3:hover {
+#links-container > li {
+  transition: transform ease 0.2s;
+}
+
+#links-container > li:hover {
   transform: translateY(-2px);
 }
 
 main {
   padding: 0 8em;
   margin: 50px 50px;
+}
+
+section {
+  scroll-margin-top: 80px;
 }
 
 #banner-heading > img {
@@ -469,7 +483,7 @@ footer {
   height: 60px;
 }
 
-footer > p{
+footer > p {
   font-size: 0.9rem;
 }
 
