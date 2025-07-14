@@ -1,17 +1,30 @@
-import './style.css';
-import { appendRemainingText } from './modules/about';
-import { updateClassesLeft , updateClassesRight } from './modules/carousel';
-import copyDiscordUserName from './modules/contact';
+import "./style.css";
+import { appendRemainingText } from "./modules/about";
+import { updateClassesLeft, updateClassesRight } from "./modules/carousel";
+import copyDiscordUserName from "./modules/contact";
 
 const rightArrow = document.querySelector("#right-arrow");
 const leftArrow = document.querySelector("#left-arrow");
 const discordIcon = document.querySelector("#discord");
 
+window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
 
-appendRemainingText()
+  setTimeout(() => {
+    const intro = document.getElementById("intro-screen");
+    intro.classList.add("hide");
+
+    setTimeout(() => {
+      intro.style.display = "none";
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }, 1000);
+  }, 3000);
+});
+
+appendRemainingText();
 setInterval(updateClassesRight, 8000);
 
-rightArrow.addEventListener('click' , updateClassesRight);
-leftArrow.addEventListener('click' , updateClassesLeft);
+rightArrow.addEventListener("click", updateClassesRight);
+leftArrow.addEventListener("click", updateClassesLeft);
 
-discordIcon.addEventListener("click" , copyDiscordUserName)
+discordIcon.addEventListener("click", copyDiscordUserName);

@@ -41,6 +41,47 @@ p {
   line-height: 150%;
 }
 
+#intro-screen {
+  position: fixed;
+  inset: 0;
+  background-color: black;
+  color: white;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+#intro-screen.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#intro-screen h1 {
+  font-family: "Satoshi", sans-serif;
+  font-size: 10rem;
+  animation: floatAndFade 4s ease-in-out forwards; 
+}
+
+@keyframes floatAndFade {
+  0% {
+    transform: rotate(0deg) translateY(0);
+    opacity: 1;
+  }
+  15% {
+    transform: rotate(5deg) translateY(-10px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(5deg) translateY(-150vh); 
+    opacity: 0;
+  }
+}
+
 nav {
   position: fixed;
   top: 0;
