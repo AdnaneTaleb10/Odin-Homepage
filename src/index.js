@@ -34,7 +34,7 @@ window.addEventListener("load", () => {
       intro.style.display = "none";
       window.scrollTo({ top: 0, behavior: "auto" });
     }, 1000);
-  }, 3000);
+  }, 2000);
 });
 
 appendRemainingText();
