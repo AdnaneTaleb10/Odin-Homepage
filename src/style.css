@@ -63,7 +63,7 @@ p {
 #intro-screen h1 {
   font-family: "Satoshi", sans-serif;
   font-size: 10rem;
-  animation: floatAndFade 4s ease-in-out forwards; 
+  animation: floatAndFade 4s ease-in-out forwards;
 }
 
 @keyframes floatAndFade {
@@ -77,7 +77,7 @@ p {
   }
 
   100% {
-    transform: rotate(5deg) translateY(-150vh); 
+    transform: rotate(5deg) translateY(-150vh);
     opacity: 0;
   }
 }
@@ -110,6 +110,10 @@ nav > h3 {
   gap: 5em;
 }
 
+#menu-toggle{
+  display: none;
+}
+
 #links-container a {
   text-decoration: none;
   font-size: 1.5rem;
@@ -128,7 +132,7 @@ nav > h3 {
 }
 
 main {
-  padding: 0 8em;
+  padding: 0 4em;
   margin: 50px 50px;
 }
 
@@ -413,7 +417,6 @@ section {
 
 #contact-section {
   margin-top: 8em;
-  padding: 0 50px;
 }
 
 #contact-title {
@@ -468,6 +471,7 @@ section {
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
   -webkit-background-clip: text;
+  background-clip: text;
   animation: growing-up-and-down 15s ease-in-out infinite;
 }
 
@@ -563,5 +567,147 @@ footer > p {
 
   100% {
     transform: scale(1) rotate(0);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #about-container > img {
+    display: none;
+  }
+
+  #current-project-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .project-related-container {
+    max-width: 100%;
+  }
+
+  .project-buttons {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #intro-screen > h1{
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+    nav {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.2em 2em;
+  }
+
+  #menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+  }
+
+  #menu-toggle span {
+    display: block;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+  }
+
+  #links-container {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 1em 0;
+    gap: 1.5em;
+  }
+
+  #links-container.active {
+    display: flex;
+  }
+
+  .social-link p {
+    display: none;
+  }
+
+  main{
+    padding: 0 2em;
+  }
+
+  .project-related-container p {
+    font-size: 1.2rem;
+  }
+
+  .project-buttons a {
+    font-size: 1.2rem;
+  }
+
+  #contact-container h1 {
+    font-size: 3rem;
+  }
+
+  #contact-section {
+    margin-top: 4em;
+  }
+
+  .social-link > svg {
+    min-width: 40px;
+    max-width: 40px;
+  }
+}
+
+/* @media screen and (max-width: 800px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.2em 2em;
+  }
+
+  #menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+  }
+
+  #menu-toggle span {
+    display: block;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+  }
+
+  #links-container {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 1em 0;
+    gap: 1.5em;
+  }
+
+  #links-container.active {
+    display: flex;
+  }
+
+  .social-link p {
+    display: none;
+  }
+} */
+
+@media screen and (max-width: 700px) {
+  h2 {
+    font-size: 2rem;
   }
 }

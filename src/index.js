@@ -7,6 +7,22 @@ const rightArrow = document.querySelector("#right-arrow");
 const leftArrow = document.querySelector("#left-arrow");
 const discordIcon = document.querySelector("#discord");
 
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menu-toggle");
+  const linksContainer = document.getElementById("links-container");
+  const links = document.querySelectorAll('#links-container > li');
+
+  menuToggle.addEventListener("click", () => {
+    linksContainer.classList.toggle("active");
+  });
+
+  links.forEach((link) => {
+    link.addEventListener('click' , () => {
+      linksContainer.classList.toggle("active");
+    })
+  })
+});
+
 window.addEventListener("load", () => {
   window.scrollTo(0, 0);
 
