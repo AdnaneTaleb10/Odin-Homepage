@@ -11,14 +11,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.querySelector("nav");
   const menuToggle = document.getElementById("menu-toggle");
   const linksContainer = document.getElementById("links-container");
-  const links = document.querySelectorAll('#links-container > li');
+  const links = document.querySelectorAll("#links-container > li");
   let areLinksDisplayed = false;
 
   menuToggle.addEventListener("click", () => {
     linksContainer.classList.toggle("active");
-    if(!areLinksDisplayed){
-      navbar.style.padding = "0 0.5em";
-    }else{
+    if (!areLinksDisplayed) {
+      navbar.style.padding = "0 1em";
+    } else {
       navbar.style.padding = "1em";
     }
 
@@ -26,10 +26,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   links.forEach((link) => {
-    link.addEventListener('click' , () => {
+    link.addEventListener("click", () => {
       linksContainer.classList.toggle("active");
-    })
-  })
+      if (!areLinksDisplayed) {
+        navbar.style.padding = "0 1em";
+      } else {
+        navbar.style.padding = "1em";
+      }
+
+      areLinksDisplayed = !areLinksDisplayed;
+    });
+  });
 });
 
 window.addEventListener("load", () => {
