@@ -16,27 +16,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   menuToggle.addEventListener("click", () => {
     linksContainer.classList.toggle("active");
-    if (!areLinksDisplayed) {
+/*     if (!areLinksDisplayed) {
       navbar.style.padding = "0 1em";
     } else {
       navbar.style.padding = "1em";
     }
 
-    areLinksDisplayed = !areLinksDisplayed;
+    areLinksDisplayed = !areLinksDisplayed; */
   });
 
   links.forEach((link) => {
     link.addEventListener("click", () => {
       linksContainer.classList.toggle("active");
-      if (window.matchMedia("(max-width: 800px)").matches) {
-        if (!areLinksDisplayed) {
-          navbar.style.padding = "0 1em";
-        } else {
-          navbar.style.padding = "1em";
-        }
-      }
-
-      areLinksDisplayed = !areLinksDisplayed;
     });
   });
 });
