@@ -28,10 +28,12 @@ document.addEventListener("DOMContentLoaded", function () {
   links.forEach((link) => {
     link.addEventListener("click", () => {
       linksContainer.classList.toggle("active");
-      if (!areLinksDisplayed) {
-        navbar.style.padding = "0 1em";
-      } else {
-        navbar.style.padding = "1em";
+      if (window.matchMedia("(max-width: 800px)").matches) {
+        if (!areLinksDisplayed) {
+          navbar.style.padding = "0 1em";
+        } else {
+          navbar.style.padding = "1em";
+        }
       }
 
       areLinksDisplayed = !areLinksDisplayed;
