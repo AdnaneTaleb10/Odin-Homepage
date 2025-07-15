@@ -494,6 +494,7 @@ section {
   max-width: 60px;
   min-width: 60px;
   fill: white;
+  vertical-align: middle;
 }
 
 #discord-container {
@@ -689,15 +690,15 @@ footer > p {
     gap: 1em;
   }
 
-  nav h3{
+  nav h3 {
     font-size: 1rem;
   }
 
-#links-container{
-  gap: 0.5rem;
-}
+  #links-container {
+    gap: 0.5rem;
+  }
 
-  #links-container a{
+  #links-container a {
     font-size: 1rem;
   }
 
